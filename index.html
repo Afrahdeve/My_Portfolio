@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afrah Portfolio</title>
+    <!--Link External CSS-->
+    <link rel="stylesheet" href="style.css">
+    <!--icons-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">Afrah Portfolio.</a>
+        <nav class="navbar">
+            <a href="#header" class="active" style="--i:1">Home</a>
+            <a href="#about" style="--i:2">About</a>
+            <a href="#skills" style="--i:3">Skills</a>
+            <a href="#contact" style="--i:5">Contact</a>
+        </nav>
+    </header>
+    <!--Hero Section-->
+    <div class="hero-container">
+        <div class="info-side">
+            <h3 class="part-1">Hello,it's Me</h3>
+            <h1>Ahamed Afrah</h1>
+            <h3 class="part-2">And I'm a <span>Frontend Developer</span></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aliquid vitae neque nesciunt blanditiis,<br>labore dolorum.
+                orem ipsum dolor sit amet consectetur adipisicing elit.
+                Aliquid vitae neque nesciunt blanditiis, labore dolorum.
+            </p>
+
+        </div>
+    </div>
+    <!--About Section-->
+
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img/pexels-photo-14653981.webp">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm a web Designer expertise is to create and web design,Frontend design,and many more</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI?UX</span><br>Designer Web</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022</span><br>Bsc Physics</li>
+                            <li><span>2023</span><br>Full Stack Development Training at Qspdiders Intitute</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section-->
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="uil uil-envelope"></i>ahamedafrahedu.dev@gmail.com</p>
+                    <p><i class="uil uil-phone"></i>9444637708</p>
+
+                    <!--Social Media Icons-->
+                    <a href="#"><i class="uil uil-facebook-f" style="--i: 7"></i></a>
+                    <a href="#"><i class="uil uil-twitter" style="--i: 8"></i></a>
+                    <a href="#"><i class="uil uil-instagram" style="--i: 9"></i></a>
+                    <a href="#"><i class="uil uil-linkedin" style="--i: 10"></i></a>
+                    <br>
+                    <button><a href="img/Ahamed_Afrah FE Res.pdf" download class="btn btn2">Download CV</a></button>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
